@@ -1,0 +1,15 @@
+name: Spell Check
+
+on: [push, pull_request]  # Проверка при пуше или pull request
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run spell check
+        uses: wagoid/commitlint-action@v3  # Использование GitHub Action для проверки орфографии
+        with:
+          files: '**/*.mdx'  # Проверка всех файлов с расширением .mdx (можно изменить на нужное)
