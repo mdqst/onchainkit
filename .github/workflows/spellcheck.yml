@@ -1,0 +1,28 @@
+            - name: Spellchecker CLI
+  # You may pin to the exact commit or the version.
+  # uses: tbroadley/spellchecker-cli-action@8369e98753c0d2c3a3c76fb4519d9056d1d4b129
+  uses: tbroadley/spellchecker-cli-action@v1.1.1
+  with:
+    # A list of files or globs to spellcheck, separated by spaces.
+    files: # optional, default is **/*.txt **/*.md
+    # The language of the files. The default language is en-US. See Spellchecker CLI for details about which languages are supported.
+    language: # optional
+    # A list of files to combine into a personal dictionary, separated by spaces.
+    dictionaries: # optional
+    # Don't respect ignore files (.gitignore, .ignore, etc).
+    noGitignore: # optional
+    # A list of regexes, separated by spaces. Spelling mistakes that match any of these regexes (after being wrapped with ^ and $) will be ignored.
+    ignore: # optional
+    # A list of retext plugins to use. See Spellchecker CLI for details about default and available plugins.
+    plugins: # optional
+    # Do not print suggested replacements for misspelled words. This option will improve Spellchecker CLI's runtime when many errors are detected.
+    noSuggestions: # optional
+    # Do not output anything for files that contain no spelling mistakes.
+    quiet: # optional
+    # A list of frontmatter keys whose values should be spellchecked. By default, no values are spellchecked. Only valid when the frontmatter plugin is used.
+    frontmatterKeys: # optional
+    # A list of report files to generate, separated by spaces. The type of the report is based on the extension of the file. (Supported: .junit.xml and .json)
+    reports: # optional
+    # A path to a config file.
+    config: # optional
+          
